@@ -1,0 +1,102 @@
+{
+  "format-version" : 2,
+  "table-uuid" : "c609508f-a240-4b9c-8416-b8139db17505",
+  "location" : "file:/C:/ws/github/iceberg-lakehouse/warehouse_flights/silver/sales",
+  "last-sequence-number" : 0,
+  "last-updated-ms" : 1721901591301,
+  "last-column-id" : 10,
+  "current-schema-id" : 0,
+  "schemas" : [ {
+    "type" : "struct",
+    "schema-id" : 0,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "transaction_id",
+      "required" : true,
+      "type" : "string"
+    }, {
+      "id" : 2,
+      "name" : "customer_id",
+      "required" : true,
+      "type" : "string"
+    }, {
+      "id" : 3,
+      "name" : "transaction_timestamp",
+      "required" : true,
+      "type" : "string"
+    }, {
+      "id" : 4,
+      "name" : "price",
+      "required" : true,
+      "type" : "string"
+    }, {
+      "id" : 5,
+      "name" : "currency",
+      "required" : true,
+      "type" : "string"
+    }, {
+      "id" : 6,
+      "name" : "flight_id",
+      "required" : true,
+      "type" : "string"
+    }, {
+      "id" : 7,
+      "name" : "booking_reference",
+      "required" : false,
+      "type" : "string",
+      "doc" : "May be Null if reserved with a Travel Agency"
+    }, {
+      "id" : 8,
+      "name" : "year_ptt",
+      "required" : true,
+      "type" : "int"
+    }, {
+      "id" : 9,
+      "name" : "month_ptt",
+      "required" : true,
+      "type" : "int"
+    }, {
+      "id" : 10,
+      "name" : "day_ptt",
+      "required" : true,
+      "type" : "int"
+    } ]
+  } ],
+  "default-spec-id" : 0,
+  "partition-specs" : [ {
+    "spec-id" : 0,
+    "fields" : [ {
+      "name" : "year_ptt",
+      "transform" : "identity",
+      "source-id" : 8,
+      "field-id" : 1000
+    }, {
+      "name" : "month_ptt",
+      "transform" : "identity",
+      "source-id" : 9,
+      "field-id" : 1001
+    }, {
+      "name" : "day_ptt",
+      "transform" : "identity",
+      "source-id" : 10,
+      "field-id" : 1002
+    } ]
+  } ],
+  "last-partition-id" : 1002,
+  "default-sort-order-id" : 0,
+  "sort-orders" : [ {
+    "order-id" : 0,
+    "fields" : [ ]
+  } ],
+  "properties" : {
+    "owner" : "quine",
+    "write.parquet.compression-codec" : "zstd"
+  },
+  "current-snapshot-id" : -1,
+  "refs" : { },
+  "snapshots" : [ ],
+  "statistics" : [ ],
+  "partition-statistics" : [ ],
+  "snapshot-log" : [ ],
+  "metadata-log" : [ ]
+}
