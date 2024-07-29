@@ -1,0 +1,249 @@
+{
+  "format-version" : 2,
+  "table-uuid" : "c609508f-a240-4b9c-8416-b8139db17505",
+  "location" : "file:/C:/ws/github/iceberg-lakehouse/warehouse_flights/silver/sales",
+  "last-sequence-number" : 5,
+  "last-updated-ms" : 1721988185491,
+  "last-column-id" : 10,
+  "current-schema-id" : 0,
+  "schemas" : [ {
+    "type" : "struct",
+    "schema-id" : 0,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "transaction_id",
+      "required" : true,
+      "type" : "string"
+    }, {
+      "id" : 2,
+      "name" : "customer_id",
+      "required" : true,
+      "type" : "string"
+    }, {
+      "id" : 3,
+      "name" : "transaction_timestamp",
+      "required" : true,
+      "type" : "string"
+    }, {
+      "id" : 4,
+      "name" : "price",
+      "required" : true,
+      "type" : "string"
+    }, {
+      "id" : 5,
+      "name" : "currency",
+      "required" : true,
+      "type" : "string"
+    }, {
+      "id" : 6,
+      "name" : "flight_id",
+      "required" : true,
+      "type" : "string"
+    }, {
+      "id" : 7,
+      "name" : "booking_reference",
+      "required" : false,
+      "type" : "string",
+      "doc" : "May be Null if reserved with a Travel Agency"
+    }, {
+      "id" : 8,
+      "name" : "year_ptt",
+      "required" : true,
+      "type" : "int"
+    }, {
+      "id" : 9,
+      "name" : "month_ptt",
+      "required" : true,
+      "type" : "int"
+    }, {
+      "id" : 10,
+      "name" : "day_ptt",
+      "required" : true,
+      "type" : "int"
+    } ]
+  } ],
+  "default-spec-id" : 0,
+  "partition-specs" : [ {
+    "spec-id" : 0,
+    "fields" : [ {
+      "name" : "year_ptt",
+      "transform" : "identity",
+      "source-id" : 8,
+      "field-id" : 1000
+    }, {
+      "name" : "month_ptt",
+      "transform" : "identity",
+      "source-id" : 9,
+      "field-id" : 1001
+    }, {
+      "name" : "day_ptt",
+      "transform" : "identity",
+      "source-id" : 10,
+      "field-id" : 1002
+    } ]
+  } ],
+  "last-partition-id" : 1002,
+  "default-sort-order-id" : 0,
+  "sort-orders" : [ {
+    "order-id" : 0,
+    "fields" : [ ]
+  } ],
+  "properties" : {
+    "owner" : "quine",
+    "write.parquet.compression-codec" : "zstd"
+  },
+  "current-snapshot-id" : 783996843676648617,
+  "refs" : {
+    "main" : {
+      "snapshot-id" : 783996843676648617,
+      "type" : "branch"
+    }
+  },
+  "snapshots" : [ {
+    "sequence-number" : 1,
+    "snapshot-id" : 3510930494949525143,
+    "timestamp-ms" : 1721902722927,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1721902323626",
+      "added-data-files" : "1",
+      "added-records" : "100",
+      "added-files-size" : "4816",
+      "changed-partition-count" : "1",
+      "total-records" : "100",
+      "total-files-size" : "4816",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "file:/C:/ws/github/iceberg-lakehouse/warehouse_flights/silver/sales/metadata/snap-3510930494949525143-1-4839bf28-0825-48d5-a93e-64e9cdff1c7b.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 2,
+    "snapshot-id" : 4515976636884510498,
+    "parent-snapshot-id" : 3510930494949525143,
+    "timestamp-ms" : 1721903964381,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1721903904943",
+      "added-data-files" : "1",
+      "added-records" : "100",
+      "added-files-size" : "4816",
+      "changed-partition-count" : "1",
+      "total-records" : "200",
+      "total-files-size" : "9632",
+      "total-data-files" : "2",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "file:/C:/ws/github/iceberg-lakehouse/warehouse_flights/silver/sales/metadata/snap-4515976636884510498-1-c4ecd8a7-7356-4157-a12b-ffd654c9b676.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 3,
+    "snapshot-id" : 6609866897235519346,
+    "parent-snapshot-id" : 4515976636884510498,
+    "timestamp-ms" : 1721912103161,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1721912037499",
+      "added-data-files" : "1",
+      "added-records" : "100",
+      "added-files-size" : "4816",
+      "changed-partition-count" : "1",
+      "total-records" : "300",
+      "total-files-size" : "14448",
+      "total-data-files" : "3",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "file:/C:/ws/github/iceberg-lakehouse/warehouse_flights/silver/sales/metadata/snap-6609866897235519346-1-8d217288-63fb-49c1-8a4f-bae4f472bdbe.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 4,
+    "snapshot-id" : 7244587449271764720,
+    "parent-snapshot-id" : 6609866897235519346,
+    "timestamp-ms" : 1721985545660,
+    "summary" : {
+      "operation" : "overwrite",
+      "spark.app.id" : "local-1721985429934",
+      "replace-partitions" : "true",
+      "added-data-files" : "1",
+      "deleted-data-files" : "3",
+      "added-records" : "100",
+      "deleted-records" : "300",
+      "added-files-size" : "4816",
+      "removed-files-size" : "14448",
+      "changed-partition-count" : "1",
+      "total-records" : "100",
+      "total-files-size" : "4816",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "file:/C:/ws/github/iceberg-lakehouse/warehouse_flights/silver/sales/metadata/snap-7244587449271764720-1-905ac94f-90f4-42a9-b6f9-b69c8c2027a1.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 5,
+    "snapshot-id" : 783996843676648617,
+    "parent-snapshot-id" : 7244587449271764720,
+    "timestamp-ms" : 1721988185491,
+    "summary" : {
+      "operation" : "overwrite",
+      "spark.app.id" : "local-1721988149364",
+      "replace-partitions" : "true",
+      "added-data-files" : "1",
+      "deleted-data-files" : "1",
+      "added-records" : "100",
+      "deleted-records" : "100",
+      "added-files-size" : "4816",
+      "removed-files-size" : "4816",
+      "changed-partition-count" : "1",
+      "total-records" : "100",
+      "total-files-size" : "4816",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "file:/C:/ws/github/iceberg-lakehouse/warehouse_flights/silver/sales/metadata/snap-783996843676648617-1-9d288b27-1c62-4ac1-8192-3fcc6dc6afcb.avro",
+    "schema-id" : 0
+  } ],
+  "statistics" : [ ],
+  "partition-statistics" : [ ],
+  "snapshot-log" : [ {
+    "timestamp-ms" : 1721902722927,
+    "snapshot-id" : 3510930494949525143
+  }, {
+    "timestamp-ms" : 1721903964381,
+    "snapshot-id" : 4515976636884510498
+  }, {
+    "timestamp-ms" : 1721912103161,
+    "snapshot-id" : 6609866897235519346
+  }, {
+    "timestamp-ms" : 1721985545660,
+    "snapshot-id" : 7244587449271764720
+  }, {
+    "timestamp-ms" : 1721988185491,
+    "snapshot-id" : 783996843676648617
+  } ],
+  "metadata-log" : [ {
+    "timestamp-ms" : 1721901591301,
+    "metadata-file" : "file:/C:/ws/github/iceberg-lakehouse/warehouse_flights/silver/sales/metadata/v1.metadata.json"
+  }, {
+    "timestamp-ms" : 1721902722927,
+    "metadata-file" : "file:/C:/ws/github/iceberg-lakehouse/warehouse_flights/silver/sales/metadata/v2.metadata.json"
+  }, {
+    "timestamp-ms" : 1721903964381,
+    "metadata-file" : "file:/C:/ws/github/iceberg-lakehouse/warehouse_flights/silver/sales/metadata/v3.metadata.json"
+  }, {
+    "timestamp-ms" : 1721912103161,
+    "metadata-file" : "file:/C:/ws/github/iceberg-lakehouse/warehouse_flights/silver/sales/metadata/v4.metadata.json"
+  }, {
+    "timestamp-ms" : 1721985545660,
+    "metadata-file" : "file:/C:/ws/github/iceberg-lakehouse/warehouse_flights/silver/sales/metadata/v5.metadata.json"
+  } ]
+}
