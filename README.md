@@ -1,5 +1,5 @@
 # iceberg-lakehouse
-Ingestion of aairline data
+Ingestion of Airline data
 
 # History
 2024-07-15 - Data modelling
